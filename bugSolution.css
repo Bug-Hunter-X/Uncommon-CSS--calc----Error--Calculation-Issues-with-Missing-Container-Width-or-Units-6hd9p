@@ -1,0 +1,11 @@
+The solution is to explicitly define the width of the container element or ensure that all values used in the `calc()` function include units:
+
+/* Correct usage: Explicit container width */
+.container { width: 500px; }
+.element { width: calc(100% - 10px); }
+
+/* Correct usage: units included in all values*/
+.element {width: calc(100% - 10px);}
+
+/* Incorrect usage. Missing unit in 10*/
+.element { width: calc(100% - 10); } /*This will not work!*/
